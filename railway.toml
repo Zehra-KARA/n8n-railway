@@ -1,0 +1,10 @@
+[build]
+builder = "dockerfile"
+
+[deploy]
+restartPolicy = "on_failure"
+restartLimit = 10
+
+[[volumes]]
+name = "data"
+mountPath = "/home/node/.n8n"
